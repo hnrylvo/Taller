@@ -1,0 +1,206 @@
+/* Estilos generales */
+body {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+main {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poke-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.poke-title img{
+    width: 220px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 48px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+#pokeInput {
+    width: 50%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+#pokeInput:focus {
+    border-color: #7FCCEC;
+}
+
+/* Estilo para el botón */
+button {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+    padding: 20px;
+    color: white;
+}
+
+.card-one, .card-two {
+    height: 100%;
+    min-height: 750px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.card-one {
+    display: flex;
+    width: 35%;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c5069763-9098-4808-b222-a0089bb5786d/dcrrow9-6eb749e4-5308-4985-ac0b-20e432f8425c.png/v1/fill/w_1600,h_2846,q_80,strp/pokedex_phone_wallpaper_by_drboxhead_dcrrow9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mjg0NiIsInBhdGgiOiJcL2ZcL2M1MDY5NzYzLTkwOTgtNDgwOC1iMjIyLWEwMDg5YmI1Nzg2ZFwvZGNycm93OS02ZWI3NDllNC01MzA4LTQ5ODUtYWMwYi0yMGU0MzJmODQyNWMucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.np-kqNxcquZ_PQMMY5BIw44HX2ccec7_5auukla8gKc');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-one h2 {
+    font-size: 30px;
+}
+
+
+.card-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    padding: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-one{
+        display: none;
+    }
+
+    .card-two {
+        width: 100%;
+    }
+}
+
+/* Colores según el tipo de Pokémon */
+.type-normal { background-color: #C2C2A1; }
+.type-flying { background-color: #BAB0D5; }
+.type-ghost { background-color: #735797; }
+.type-dark { background-color: #333; }
+.type-steel { background-color: #CCCCDE; }
+.type-ground { background-color: #B1736C; }
+.type-poison { background-color: #7C538C; }
+.type-grass { background-color: #48D0B0; }
+.type-fire { background-color: #FB6C6C; }
+.type-electric { background-color: #FFD86F; }
+.type-fairy { background-color: #f469a9; }
+.type-bug { background-color: #C3CE75; }
+.type-fighting { background-color: #d6b591; }
+.type-water { background-color: #609FB5; }
+.type-psychic { background-color: #9B7FA6; }
+.type-ice { background-color: #7FCCEC; }
+.type-rock { background-color: #a6aab6; }
+.type-dragon { background-color: #F9BE00; }
+
+.pk-primaryInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    margin-bottom: 100px;
+}
+
+.pk-img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.pk-secondaryInfo {
+    width: 100%;
+}
+
+.pk-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pk-table td {
+    font-size: 23px;
+    padding: 5px;
+}
+
+.pk-table td:first-child {
+    text-align: left;
+    width: 50%;
+}
+
+.pk-table td:last-child {
+    text-align: left;
+    width: 50%;
+}
+
+.pk-table, .pk-table td {
+    border: none;
+}
+
+.pk-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pk-error p {
+    font-size: 24px;
+    font-weight: bold;
+}
